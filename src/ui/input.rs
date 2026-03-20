@@ -74,3 +74,13 @@ pub fn clear_screen() {
     print!("\x1B[2J\x1B[H");
     io::stdout().flush().unwrap_or(());
 }
+
+pub fn clear_line() {
+    print!("\x1B[2K\r");
+    io::stdout().flush().unwrap_or(());
+}
+
+pub fn delete_line() {
+    print!("\x1B[2K\r");
+    io::stdout().flush().unwrap_or(());
+}
