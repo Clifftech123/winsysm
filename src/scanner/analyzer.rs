@@ -45,7 +45,7 @@ pub fn run() -> AppResult<()> {
 
 /// Drill-down scan — shows folder contents and lets user go deeper
 fn drill_down(start_path: &Path) -> AppResult<()> {
-    let mut current_path = start_path.clone();
+    let mut current_path = start_path.to_path_buf();
 
     loop {
         println!(
